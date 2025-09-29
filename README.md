@@ -1,6 +1,6 @@
 # 🏦 On-Chain Piggy Bank - U2U Testnet dApp
 
-A ** timelock savings dApp built for the U2U Hackathon, deployed on U2U EVM testnet.
+A timelock savings dApp built for the U2U Hackathon, deployed on U2U EVM testnet.
 
 ## ✨ Features
 
