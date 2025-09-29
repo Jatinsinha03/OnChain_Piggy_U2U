@@ -10,47 +10,17 @@ A timelock savings dApp built for the U2U Hackathon, deployed on U2U EVM testnet
 - **Batch Operations** - Withdraw multiple matured deposits at once
 - **Responsive Design** - Works on desktop and mobile devices
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+ 
-- MetaMask wallet
-- U2U testnet U2U tokens
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd onchainpiggy
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
 ## 🔗 U2U Testnet Setup
 
 ### 1. Add U2U Testnet to MetaMask
 
 **Network Name:** U2U Testnet  
-**RPC URL:** `https://rpc.testnet.U2U.evm.U2U.com`  
-**Chain ID:** `420` (0x1a4)  
+**RPC URL:** `https://rpc-nebulas-testnet.uniultra.xyz`  
+**Chain ID:** `0x9b4`   
 **Currency Symbol:** U2U  
-**Block Explorer:** `https://testnet.U2Uscan.org`
+**Block Explorer:** `https://testnet.u2uscan.xyz/`
 
 ### 2. Get Testnet U2U
-
-Visit the [U2U Testnet Faucet](https://testnet.U2Uscan.org/faucet) to get testnet U2U tokens.
 
 ## 💎 How to Use
 
@@ -88,7 +58,7 @@ Visit the [U2U Testnet Faucet](https://testnet.U2Uscan.org/faucet) to get testne
 
 The dApp interacts with a deployed smart contract on U2U testnet:
 
-- **Contract Address:** `0xaf54BEf4a78B675AF51A14FdB346b98FbD3Fdc3b`
+- **Contract Address:** `0xa612c68fB455e9b598fCFB1C46c120ED21ded5F6`
 - **Features:** ETH/ERC-20 deposits, timelock mechanism, batch withdrawals
 - **Security:** Reentrancy protection, proper access controls
 
