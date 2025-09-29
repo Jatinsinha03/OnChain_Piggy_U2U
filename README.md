@@ -1,11 +1,10 @@
 # 🏦 On-Chain Piggy Bank - U2U Testnet dApp
 
-A **crazy black theme with dark blue neon design** timelock savings dApp built for the U2U Hackathon, deployed on U2U EVM testnet.
+A ** timelock savings dApp built for the U2U Hackathon, deployed on U2U EVM testnet.
 
 ## ✨ Features
 
 - **U2U Testnet Compatible** - Built specifically for U2U EVM testnet
-- **Crazy Black Theme** - Dark design with neon blue accents and floating elements
 - **Timelock Savings** - Deposit U2U or ERC-20 tokens with custom lock periods
 - **No Early Withdrawals** - Enforced time-based locking mechanism
 - **Batch Operations** - Withdraw multiple matured deposits at once
@@ -76,15 +75,6 @@ Visit the [U2U Testnet Faucet](https://testnet.U2Uscan.org/faucet) to get testne
 - Wait for your deposit to mature
 - Click "Withdraw" on matured deposits
 - Or use "Withdraw All Matured" for batch operations
-
-## 🎨 Design Features
-
-- **Crazy Black Theme** - Pure black background with subtle gradients
-- **Neon Blue Accents** - Glowing blue elements throughout the interface
-- **Floating Elements** - Animated background orbs with blur effects
-- **Glass Morphism** - Semi-transparent cards with backdrop blur
-- **Smooth Animations** - Hover effects, transitions, and micro-interactions
-- **Responsive Layout** - Adapts to all screen sizes
 
 ## 🔧 Technical Details
 
