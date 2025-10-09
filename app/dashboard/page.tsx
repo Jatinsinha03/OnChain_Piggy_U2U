@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import abi from "../../utils/contractABI.json"
-import { CONTRACT_ADDRESS, U2U_TESTNET_CHAIN_ID, SUPPORTED_NETWORKS } from "../../utils/config";
+import { CONTRACT_ADDRESS, U2U_MAINNET_CHAIN_ID, SUPPORTED_NETWORKS } from "../../utils/config";
 import { ERC20_ABI } from "../../utils/erc20Abi";
 
 type Deposit = {
@@ -71,35 +71,35 @@ export default function Page() {
     
     try {
       const chainId = await window.ethereum.request({ method: 'eth_chainId' });
-      console.log('Current chain ID:', chainId, 'Expected:', U2U_TESTNET_CHAIN_ID);
+      console.log('Current chain ID:', chainId, 'Expected:', U2U_MAINNET_CHAIN_ID);
       setNetworkId(chainId);
       
-      if (chainId !== U2U_TESTNET_CHAIN_ID) {
-        console.log('Switching to U2U Testnet...');
+      if (chainId !== U2U_MAINNET_CHAIN_ID) {
+        console.log('Switching to U2U Solaris Mainnet...');
         try {
           await window.ethereum.request({
             method: 'wallet_switchEthereumChain',
-            params: [{ chainId: U2U_TESTNET_CHAIN_ID }],
+            params: [{ chainId: U2U_MAINNET_CHAIN_ID }],
           });
-          console.log('Successfully switched to U2U Testnet');
+          console.log('Successfully switched to U2U Solaris Mainnet');
         } catch (switchError: any) {
           console.log('Switch failed, adding network:', switchError);
           if (switchError.code === 4902) {
             await window.ethereum.request({
               method: 'wallet_addEthereumChain',
               params: [{
-                chainId: U2U_TESTNET_CHAIN_ID,
-                chainName: 'U2U Testnet',
+                chainId: U2U_MAINNET_CHAIN_ID,
+                chainName: 'U2U Solaris Mainnet',
                 nativeCurrency: {
                   name: 'U2U',
                   symbol: 'U2U',
                   decimals: 18,
                 },
-                rpcUrls: [SUPPORTED_NETWORKS[U2U_TESTNET_CHAIN_ID].rpc],
-                blockExplorerUrls: [SUPPORTED_NETWORKS[U2U_TESTNET_CHAIN_ID].explorer],
+                rpcUrls: [SUPPORTED_NETWORKS[U2U_MAINNET_CHAIN_ID].rpc],
+                blockExplorerUrls: [SUPPORTED_NETWORKS[U2U_MAINNET_CHAIN_ID].explorer],
               }],
             });
-            console.log('Successfully added U2U Testnet');
+            console.log('Successfully added U2U Solaris Mainnet');
           } else {
             console.error('Failed to switch/add network:', switchError);
           }
@@ -107,8 +107,8 @@ export default function Page() {
       }
       
       const finalChainId = await window.ethereum.request({ method: 'eth_chainId' });
-      setIsCorrectNetwork(finalChainId === U2U_TESTNET_CHAIN_ID);
-      console.log('Network check complete. Correct network:', finalChainId === U2U_TESTNET_CHAIN_ID);
+      setIsCorrectNetwork(finalChainId === U2U_MAINNET_CHAIN_ID);
+      console.log('Network check complete. Correct network:', finalChainId === U2U_MAINNET_CHAIN_ID);
     } catch (error) {
       console.error('Error checking/switching network:', error);
     }
@@ -136,7 +136,7 @@ export default function Page() {
       window.ethereum.on('chainChanged', (chainId: string) => {
         console.log('Network changed to:', chainId);
         setNetworkId(chainId);
-        setIsCorrectNetwork(chainId === U2U_TESTNET_CHAIN_ID);
+        setIsCorrectNetwork(chainId === U2U_MAINNET_CHAIN_ID);
         // Reload deposits when network changes
         if (contract && account) {
           loadDeposits();
@@ -312,11 +312,11 @@ export default function Page() {
             🏦 ON-CHAIN PIGGY
           </h1>
           <p className="text-xl text-gray-300 mb-6">
-            Timelock Savings on <span className="text-blue-400 font-semibold">U2U Testnet</span>
+            Timelock Savings on <span className="text-blue-400 font-semibold">U2U Solaris Mainnet</span>
           </p>
           <div className="inline-flex items-center px-4 py-2 bg-gray-900/50 backdrop-blur-sm rounded-full border border-blue-500/30">
             <div className="w-3 h-3 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
-            <span className="text-blue-400 text-sm">U2U TESTNET</span>
+            <span className="text-blue-400 text-sm">U2U SOLARIS MAINNET</span>
           </div>
         </div>
 
@@ -339,7 +339,7 @@ export default function Page() {
               <div className="text-right">
                 <span className="text-gray-400 text-sm">Network:</span>
                 <div className={`text-sm font-semibold ${isCorrectNetwork ? 'text-green-400' : 'text-red-400'}`}>
-                  {isCorrectNetwork ? '✅ U2U Testnet' : `❌ Wrong Network (${networkId})`}
+                  {isCorrectNetwork ? '✅ U2U Solaris Mainnet' : `❌ Wrong Network (${networkId})`}
                 </div>
               </div>
             </div>
@@ -348,7 +348,7 @@ export default function Page() {
                 onClick={checkAndSwitchNetwork}
                 className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
               >
-                Switch to U2U Testnet
+                Switch to U2U Solaris Mainnet
               </button>
             )}
           </div>
@@ -639,7 +639,7 @@ export default function Page() {
         )}
 
         <footer className="text-center mt-16 text-gray-500">
-          <p>Built for U2U Hackathon • Powered by U2U EVM</p>
+          <p>Built for U2U Hackathon • Powered by U2U Solaris Mainnet</p>
         </footer>
       </main>
     </div>

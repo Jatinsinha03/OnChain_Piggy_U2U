@@ -1,32 +1,32 @@
-# 🏦 On-Chain Piggy Bank - U2U Testnet dApp
+# 🏦 On-Chain Piggy Bank - U2U Solaris Mainnet dApp
 
-A timelock savings dApp built for the U2U Hackathon, deployed on U2U EVM testnet.
+A timelock savings dApp built for the U2U Hackathon, deployed on U2U Solaris Mainnet.
 
 ## ✨ Features
 
-- **U2U Testnet Compatible** - Built specifically for U2U EVM testnet
+- **U2U Solaris Mainnet** - Built specifically for U2U Solaris Mainnet
 - **Timelock Savings** - Deposit U2U or ERC-20 tokens with custom lock periods
 - **No Early Withdrawals** - Enforced time-based locking mechanism
 - **Batch Operations** - Withdraw multiple matured deposits at once
 - **Responsive Design** - Works on desktop and mobile devices
 
-## 🔗 U2U Testnet Setup
+## 🔗 U2U Solaris Mainnet Setup
 
-### 1. Add U2U Testnet to MetaMask
+### 1. Add U2U Solaris Mainnet to MetaMask
 
-**Network Name:** U2U Testnet  
-**RPC URL:** `https://rpc-nebulas-testnet.uniultra.xyz`  
-**Chain ID:** `0x9b4`   
+**Network Name:** U2U Solaris Mainnet  
+**RPC URL:** `https://rpc-mainnet.u2u.xyz`  
+**Chain ID:** `39` (hex: `0x27`)   
 **Currency Symbol:** U2U  
-**Block Explorer:** `https://testnet.u2uscan.xyz/`
+**Block Explorer:** `https://u2uscan.xyz/`
 
-### 2. Get Testnet U2U
+### 2. Get U2U Tokens
 
 ## 💎 How to Use
 
 ### 1. Connect Wallet
 - Click "Connect MetaMask" 
-- Ensure you're on U2U Testnet
+- Ensure you're on U2U Solaris Mainnet
 - The app will automatically prompt you to switch networks if needed
 
 ### 2. Deposit U2U
@@ -50,15 +50,17 @@ A timelock savings dApp built for the U2U Hackathon, deployed on U2U EVM testnet
 
 - **Frontend:** Next.js 15 + React 19 + TypeScript
 - **Styling:** Tailwind CSS 4 with custom animations
-- **Blockchain:** U2U EVM testnet integration
+- **Blockchain:** U2U Solaris Mainnet integration
 - **Wallet:** MetaMask compatibility
 - **Smart Contract:** Solidity timelock contract with reentrancy protection
 
 ## 📱 Smart Contract
 
-The dApp interacts with a deployed smart contract on U2U testnet:
+The dApp interacts with a deployed smart contract on U2U Solaris Mainnet:
 
-- **Contract Address:** `0xa612c68fB455e9b598fCFB1C46c120ED21ded5F6`
+- **Contract Address:** `0x423B1e68C91063a505C6aB4aD7736d6ED6a85aCC`
+- **Chain ID:** 39 (0x27)
+- **Network:** U2U Solaris Mainnet
 - **Features:** ETH/ERC-20 deposits, timelock mechanism, batch withdrawals
 - **Security:** Reentrancy protection, proper access controls
 
@@ -67,8 +69,8 @@ The dApp interacts with a deployed smart contract on U2U testnet:
 ### Common Issues
 
 1. **"Wrong Network" Error**
-   - Ensure MetaMask is connected to U2U Testnet (Chain ID: 420)
-   - Use the "Switch to U2U Testnet" button
+   - Ensure MetaMask is connected to U2U Solaris Mainnet (Chain ID: 39 / 0x27)
+   - Use the "Switch to U2U Solaris Mainnet" button
 
 2. **"Could not decode result data" Error**
    - This usually means no deposits exist yet
@@ -85,7 +87,7 @@ Open browser console to see detailed error messages and transaction logs.
 
 ## 🎯 U2U Hackathon Features
 
-- **U2U Testnet Native** - Built specifically for U2U ecosystem
+- **U2U Solaris Mainnet** - Deployed on U2U Solaris Mainnet for production use
 - **EVM Compatibility** - Uses U2U's EVM layer for Ethereum tooling
 - **Gas Optimization** - Efficient smart contract design
 - **User Experience** - Intuitive interface for DeFi beginners

@@ -82,7 +82,7 @@ function Hero() {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="mt-5 text-lg md:text-xl text-white/70 max-w-2xl mx-auto"
         >
-          A timelock piggy bank on <b>U2U EVM Testnet</b>. Deposit U2U or any ERC-20,
+          A timelock piggy bank on <b>U2U Solaris Mainnet</b>. Deposit U2U or any ERC-20,
           watch the neon countdown tick, and unlock with a single click.
         </motion.p>
 
@@ -123,7 +123,7 @@ function StatMarquee() {
   const stats = [
     'Non-custodial', 'ERC-20 Support', 'Fee-on-Transfer Safe',
     'Reentrancy-Guarded', 'Batch Withdraw', 'Countdown Timers',
-    'Dark Neon UI', 'U2U EVM Ready'
+    'Dark Neon UI', 'U2U Solaris Mainnet'
   ];
   return (
     <div className="relative overU2U-hidden border-y border-white/10 bg-white/5">
@@ -184,7 +184,7 @@ function Features() {
 
 function Story() {
   const steps = [
-    { title: 'Connect Wallet', desc: 'Open the app and connect MetaMask on U2U EVM Testnet.', icon: '🔌' },
+    { title: 'Connect Wallet', desc: 'Open the app and connect MetaMask on U2U Solaris Mainnet.', icon: '🔌' },
     { title: 'Deposit Tokens', desc: 'U2U via depositETH or any ERC-20 via approve + depositToken.', icon: '💰' },
     { title: 'Watch the Glow', desc: 'Each deposit gets a neon countdown to its unlock time.', icon: '🌃' },
     { title: 'Withdraw All Matured', desc: 'One button. Many deposits. Zero hassle.', icon: '🗝️' },
@@ -271,7 +271,7 @@ function CTA() {
           Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400">lock the bag</span>?
         </h2>
         <p className="text-white/70 mt-3">
-          Deploy once, connect MetaMask, and start your savings streak on U2U EVM Testnet.
+          Deploy once, connect MetaMask, and start your savings streak on U2U Solaris Mainnet.
         </p>
         <div className="mt-8 flex items-center justify-center gap-4">
           <a
@@ -298,7 +298,7 @@ function Footer() {
       <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-3 gap-8 text-sm text-white/70">
         <div>
           <div className="font-bold text-white">On-Chain Piggy</div>
-          <p className="mt-2">Timelock savings on U2U EVM Testnet — ETH/U2U & ERC-20 friendly.</p>
+          <p className="mt-2">Timelock savings on U2U Solaris Mainnet — ETH/U2U & ERC-20 friendly.</p>
         </div>
         <div>
           <div className="font-semibold text-white">FAQ</div>
